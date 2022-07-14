@@ -1,0 +1,82 @@
+$primary: #5265E1;
+$secondary: #FA5959;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary
+);
+
+//General
+
+p {
+  color:grey;
+}
+
+button > p {
+  font-weight: $font-weight-bold;
+  color:black;
+}
+
+//Navbar
+
+#btn-login {
+  $navbar-light-color: white;
+}
+
+//Nav-tabs
+$nav-tabs-border-color: none;
+$nav-tabs-link-active-border-color:none;
+$nav-tabs-link-active-color: none;
+$nav-link-color:black;
+$nav-link-hover-color:$secondary;
+
+button#nav-contact-tab.nav-link, button#nav-profile-tab.nav-link, button#nav-home-tab.nav-link {
+  border-bottom: solid 1px rgb(176, 174, 174);
+}
+
+button#nav-contact-tab.nav-link.active, button#nav-profile-tab.nav-link.active, button#nav-home-tab.nav-link.active {
+  border-bottom: solid 3px $secondary;
+  color:black;
+  font-weight: bold;
+}
+
+button.nav-link.active {
+  border-bottom: $secondary;
+}
+
+//Buttons
+$enable-shadows:true;
+
+//Cards
+
+div.card.text-center {
+  padding:0;
+}
+
+//Accordion
+
+$accordion-color:black;
+$accordion-border-color: none; 
+$accordion-button-active-bg :none;
+$accordion-icon-color:$primary;
+
+.button.accordion-button {
+  border-bottom: solid 1px $primary;
+}
+
+div.accordion-body {
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+
+  div.container.text-center {
+    width:50%;
+  }
+
+}
+
+//import bootstrap
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+// usar purgecss al final del projecte
